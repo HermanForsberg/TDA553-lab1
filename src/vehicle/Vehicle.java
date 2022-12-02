@@ -14,11 +14,7 @@ public abstract class Vehicle implements Movable{
     private double dx;
     private double dy;
 
-<<<<<<< HEAD:src/Car.java
-    public Car(int nrDoors, double enginePower, double currentSpeed, Color color) {
-=======
     public Vehicle(int nrDoors, double enginePower, double currentSpeed, Color color) {
->>>>>>> Develop:src/vehicle/Vehicle.java
         this.nrDoors = Math.max(nrDoors, 0);;
         this.enginePower = Math.max(enginePower, 0);
         this.currentSpeed = Math.max(currentSpeed, 0);
@@ -28,11 +24,8 @@ public abstract class Vehicle implements Movable{
         this.y = 0;
         this.dx = 0;
         this.dy = 0;
-<<<<<<< HEAD:src/Car.java
-=======
         
         stopEngine();
->>>>>>> Develop:src/vehicle/Vehicle.java
     }
 
     public int getNrDoors() {
@@ -60,11 +53,7 @@ public abstract class Vehicle implements Movable{
     }
 
     public void setColor(Color color) {
-<<<<<<< HEAD:src/Car.java
-        this.color = color;
-=======
             this.color = color;
->>>>>>> Develop:src/vehicle/Vehicle.java
     }
 
     public void startEngine() {
