@@ -18,7 +18,7 @@ public class VehicleView extends JFrame{
     private static final int Y = 600;
 
     // The controller member
-    CarController carC;
+    VehicleController vehicleC;
 
     DrawPanel drawPanel = new DrawPanel(X, Y-240);
 
@@ -40,7 +40,7 @@ public class VehicleView extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public VehicleView(String framename, CarController vc){
+    public VehicleView(String framename, VehicleController vc){
         this.vehicleC = vc;
         initComponents(framename);
     }
@@ -104,7 +104,7 @@ public class VehicleView extends JFrame{
         gasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                carC.gas(gasAmount);
+                vehicleC.gas(gasAmount);
             }
         });
 
