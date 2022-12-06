@@ -35,8 +35,8 @@ public class VehicleController {
         VehicleController vc = new VehicleController();
 
         vc.vehicles.add(new Volvo240(4, 100, 0, Color.RED));
-        vc.vehicles.add(new Saab95(4, 100, 0, Color.RED));
-        vc.vehicles.add(new Scania(4, 100, 0, Color.RED));
+        vc.vehicles.add(new Saab95(4, 100, 0, Color.YELLOW));
+        vc.vehicles.add(new Scania(4, 100, 0, Color.BLACK));
 
         // Start a new view and send a reference of self
         vc.frame = new VehicleView("VehicleSim 1.0", vc);
