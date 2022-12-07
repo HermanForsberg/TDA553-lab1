@@ -1,7 +1,7 @@
 package vehicle;
 import java.awt.*;
 
-public abstract class Car extends Vehicle {
+public class Car extends Vehicle {
     private boolean loaded;
 
     public boolean getLoaded() {
