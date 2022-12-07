@@ -24,8 +24,8 @@ public class LoadStack extends Load {
     public void unload(Car car){
         if ((!carStack.isEmpty()) && 
             (carStack.peek() == car)) {
-            carStack.pop();
             car.setLoaded(false);
+            carStack.pop();
         }
     }
 
