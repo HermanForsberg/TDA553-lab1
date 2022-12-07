@@ -45,11 +45,35 @@ public class CarTransport extends Vehicle implements Load{
 
     @Override
     public void load(Car car) { //You can only load cars.
-        if ((carStack.size() < maxNumberOfCarsLoaded) && (distanceToCar(car) < 1) && (car.getDx() == 0) &&
-         (car.getDy() == 0) && (flatbed.getFlatbedUp() == false)){
+        if (canLoadCar(car)){
             car.setLoaded(true);
             this.carStack.push(car);
         }
+    }
+
+    @Override
+    public void unload(Car car) { //You can only load cars.
+        if (canUnloadCar(car)) {
+            carStack.pop();
+            car.setLoaded(false);
+        }
+    }
+
+    private boolean canLoadCar(Car car) {
+        return (
+            (carStackNotFull(car)) && 
+            (distanceToCar(car) < 1) && 
+            (carNotMoving(car)) && 
+            (!flatbed.getFlatbedUp())
+        );
+    }
+    
+    private boolean canUnloadCar(Car car) {
+        return (
+            (!carStack.isEmpty()) && 
+            (carStack.peek() == car) && 
+            (flatbed.getFlatbedUp() == false)
+        );
     }
 
     private double distanceToCar(Car car) {
@@ -60,12 +84,11 @@ public class CarTransport extends Vehicle implements Load{
         return distance;
     }
 
-    @Override
-    public void unload(Car car) { //You can only load cars.
-        if ((carStack.size() > 0) && (carStack.peek() == car) && (flatbed.getFlatbedUp() == false)){
-            carStack.pop();
-            car.setLoaded(false);
-        }
+    private boolean carNotMoving(Car car) {
+        return (car.getDx() == 0) && (car.getDy() == 0);
     }
-    
+
+    private boolean carStackNotFull(Car car) {
+        return carStack.size() < maxNumberOfCarsLoaded;
+    }
 }

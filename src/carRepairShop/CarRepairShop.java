@@ -2,7 +2,7 @@ package carRepairShop;
 import load.Load;
 import vehicle.Car;
 
-public class CarRepairShop implements Load{
+public class CarRepairShop extends Load{
     private int maxNumberOfCarsLoaded;
     private int currentNumberOfCarsLoaded;
     private double x;
@@ -29,18 +29,10 @@ public class CarRepairShop implements Load{
 
     @Override
     public void load(Car car) { //You can only load cars.
-        if ((currentNumberOfCarsLoaded < maxNumberOfCarsLoaded) && (distanceToCar(car) < 1)){
+        if ((currentNumberOfCarsLoaded < maxNumberOfCarsLoaded) && (distanceToCar(car, x, y) < 1)){
             currentNumberOfCarsLoaded += 1;
             car.setLoaded(true);
         }
-    }
-
-    private double distanceToCar(Car car) {
-        double distance;
-        double xDifference = car.getX() - x;
-        double yDifference = car.getY() - y;
-        distance = Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2));
-        return distance;
     }
 
     @Override
