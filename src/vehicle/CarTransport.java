@@ -4,7 +4,7 @@ import java.awt.*;
 import flatbed.TwoStateFlatbed;
 import load.LoadStack;
 
-public class CarTransport extends Truck {
+public class CarTransport extends Vehicle implements Load{
     private TwoStateFlatbed flatbed;
     private LoadStack load;
 

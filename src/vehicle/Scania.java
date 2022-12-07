@@ -3,7 +3,7 @@ import java.awt.*;
 
 import flatbed.DegreeFlatbed;
 
-public class Scania extends Truck{
+public class Scania extends Vehicle{
     private DegreeFlatbed flatbed;
 
     public Scania(int nrDoors, double enginePower, double currentSpeed, Color color){
