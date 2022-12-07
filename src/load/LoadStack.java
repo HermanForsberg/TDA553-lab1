@@ -3,7 +3,6 @@ import java.util.Stack;
 
 import vehicle.Car;
 
-
 public class LoadStack extends Load {
     private int maxNumberOfCarsLoaded;
     private Stack<Car> carStack;

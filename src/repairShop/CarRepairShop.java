@@ -18,7 +18,6 @@ public class CarRepairShop {
         }
     }
 
-    
     public void unload(Car car) { //You can only load cars.
         load.unload(car);
     }
