@@ -2,19 +2,21 @@
     What is the contract for gas() and brake() in this type? Do the implementations of gas() and brake() 
     both Volvo and Scania follow this contract? Does your design follow the Liskov Substitution Principle?
 
-    The contract for gas and brake in Vehicle is "if you give me a double between 0 and 1 i will increment the speed of 
-    the vehicle" and "if you give me a double between 0 and 1 i will decrement the speed for the vehicle" respectivly.
-    Volvo and Scania follows the contract of gas() and brake(). The design follows Liskov Substitution Principle.
+    The contract for gas and brake in Vehicle is "if gas is able to gas and you give me a double between 0 and 1 i will
+    increment the speed of the vehicle" and "if break is able to break and you give me a double between 0 and 1 i will 
+    decrement the speed for the vehicle" respectivly. Volvo and Scania follows the contract of gas() and brake(). 
+    The design follows Liskov Substitution Principle.
 
 
 2.  How did you handle duplicated code between Scania, the car transporters and the repair shops? 
     Explain how you decided when to use subclassing and when to use composition and delegation.
-
-    We made a subclass of Vehicle called Truck since Scania and CarTransporter are both trucks, and since the
-    Liskov Substitution Principle applies to both of them. Therefore we get got rid of a lot of dublicated between 
-    Scania and CarTransporter. 
-    There is not any dublicated code between the two flatbed implementations and the two load implementations.
-    Therefore, we used delegation and composition to get rid of dublicated code. 
+ 
+    At first we made a subclass of type Truck and made that a superclass to Scania and CarTransporter. But since
+    Truck only held one method we decided to delete it and had Scania and CarTransporter be subclasses of vehicle directly.
+    The only duplicated code was speedFactor(). We decided to make speedFactor() a protected method which we then override
+    in Volvo240 and Saab95.
+    There was dublicated code between the two flatbed implementations and the two load implementations.
+    Therefore, we used delegation and composition to get rid of dublicated code.  
     We made an interface flatbed and an interface load, incase more vehicles would use
     the flatbed interface or the load interface. 
     
