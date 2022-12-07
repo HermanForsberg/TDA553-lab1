@@ -2,7 +2,7 @@ package carRepairShop;
 import load.Load;
 import vehicle.Car;
 
-public class CarRepairShop extends Load{
+public class CarRepairShop {
     private int maxNumberOfCarsLoaded;
     private int currentNumberOfCarsLoaded;
     private double x;
