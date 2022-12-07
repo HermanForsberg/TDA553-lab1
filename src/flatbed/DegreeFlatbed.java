@@ -9,11 +9,11 @@ public class DegreeFlatbed implements Flatbed{
     }
 
     public void raise(){
-        flatbedAngle = Math.min(flatbedAngle += 1, 70);
+        flatbedAngle = Math.min(flatbedAngle + 1, 70);
     }
 
     public void lower(){
-        flatbedAngle = Math.max(flatbedAngle -= 1, 0);
+        flatbedAngle = Math.max(flatbedAngle - 1, 0);
     }
 
     public int getFlatbedAngle() {
