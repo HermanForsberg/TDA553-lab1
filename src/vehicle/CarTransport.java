@@ -52,6 +52,7 @@ public class CarTransport extends Truck implements Load{
         }
     }
 
+    @Override
     private double distanceToCar(Car car) {
         double distance;
         double xDifference = car.getX() - getX();
