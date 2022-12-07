@@ -1,4 +1,4 @@
-package carRepairShop;
+package repairShop;
 import load.Load;
 import vehicle.Car;
 
