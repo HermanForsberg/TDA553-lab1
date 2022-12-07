@@ -5,7 +5,7 @@ import java.util.Stack;
 import flatbed.TwoStateFlatbed;
 import load.Load;
 
-public class CarTransport extends Truck implements Load{
+public class CarTransport extends Vehicle implements Load{
     private TwoStateFlatbed flatbed;
     private int maxNumberOfCarsLoaded;
     private Stack<Car> carStack;

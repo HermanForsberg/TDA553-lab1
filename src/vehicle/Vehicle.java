@@ -53,7 +53,7 @@ public abstract class Vehicle implements Movable{
     }
 
     public void setColor(Color color) {
-            this.color = color;
+        this.color = color;
     }
 
     public void startEngine() {
@@ -64,7 +64,10 @@ public abstract class Vehicle implements Movable{
         currentSpeed = 0;
     }
 
-    abstract double speedFactor();
+    protected double speedFactor(){
+        return getEnginePower() * 0.01;
+    }
+
 
     private void incrementSpeed(double amount){
 	    double currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower());
