@@ -2,9 +2,10 @@
     What is the contract for gas() and brake() in this type? Do the implementations of gas() and brake() 
     both Volvo and Scania follow this contract? Does your design follow the Liskov Substitution Principle?
 
-    The contract for gas and brake in Vehicle is "if you give me a double between 0 and 1 i will increment the speed of 
-    the vehicle" and "if you give me a double between 0 and 1 i will decrement the speed for the vehicle" respectivly.
-    Volvo and Scania follows the contract of gas() and brake(). The design follows Liskov Substitution Principle.
+    The contract for gas and brake in Vehicle is "if gas is able to gas and you give me a double between 0 and 1 i will
+    increment the speed of the vehicle" and "if break is able to break and you give me a double between 0 and 1 i will 
+    decrement the speed for the vehicle" respectivly. Volvo and Scania follows the contract of gas() and brake(). 
+    The design follows Liskov Substitution Principle.
 
 
 2.  How did you handle duplicated code between Scania, the car transporters and the repair shops? 
