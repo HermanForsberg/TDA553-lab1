@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 public class VehicleView extends JFrame{
     private static final int X = 600;
     private static final int Y = 600;
+    private SpinnerModel spinnerModel;
 
     // The controller member
     VehicleController vehicleC;
@@ -56,12 +57,7 @@ public class VehicleView extends JFrame{
         this.add(drawPanel);
 
 
-
-        SpinnerModel spinnerModel =
-                new SpinnerNumberModel(0, //initial value
-                        0, //min
-                        100, //max
-                        1);//step
+        spinnerModel = new SpinnerModel();
         gasSpinner = new JSpinner(spinnerModel);
         gasSpinner.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
