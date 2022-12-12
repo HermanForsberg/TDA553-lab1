@@ -1,9 +1,18 @@
 import java.util.ArrayList;
+import java.util.List;
 
 import vehicle.Vehicle;
 
 public class StateOfGame {
-    private ArrayList<Vehicle> vehicles = new ArrayList<>(); 
 
-    
+    private List<Vehicle> vehicles = new ArrayList<>(); 
+
+    public StateOfGame(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
 }
