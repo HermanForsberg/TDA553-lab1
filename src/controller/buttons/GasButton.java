@@ -1,12 +1,13 @@
 package controller.buttons;
 
 import vehicle.Vehicle;
+import StateOfGame;
 
 public class GasButton {
-    
+    StateOfGame state;
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : getVehicles()
+        for (Vehicle vehicle : state
                 ) {
             vehicle.gas(gas);
         }
