@@ -30,6 +30,7 @@ public class VehicleController {
 
     //methods:
 
+    //Move to Main/APP
     public static void main(String[] args) {
         // Instance of this class
         VehicleController vc = new VehicleController();
@@ -48,6 +49,8 @@ public class VehicleController {
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
+
+    //Should be in Update
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle vehicle : vehicles) {
@@ -61,6 +64,7 @@ public class VehicleController {
         }
     }
 
+    //Sholud be in Controller
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;

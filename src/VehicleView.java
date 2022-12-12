@@ -18,17 +18,24 @@ public class VehicleView extends JFrame{
     private static final int Y = 600;
 
     // The controller member
+    
+    //Should not have this!
     VehicleController vehicleC;
 
     DrawPanel drawPanel = new DrawPanel(X, Y-240);
 
+    //Move to Controller
     JPanel controlPanel = new JPanel();
 
-    JPanel gasPanel = new JPanel();
+    //Move to Spinner class
     JSpinner gasSpinner = new JSpinner();
     int gasAmount = 0;
+
+    //Move to the GasPanel class
+    JPanel gasPanel = new JPanel();
     JLabel gasLabel = new JLabel("Amount of gas");
 
+    //All buttons should be moved to their respective class
     JButton gasButton = new JButton("Gas");
     JButton brakeButton = new JButton("Brake");
     JButton turboOnButton = new JButton("Saab Turbo on");
@@ -41,7 +48,7 @@ public class VehicleView extends JFrame{
 
     // Constructor
     public VehicleView(String framename, VehicleController vc){
-        this.vehicleC = vc;
+        this.vehicleC = vc; //Should be taken away
         initComponents(framename);
     }
 
@@ -49,14 +56,15 @@ public class VehicleView extends JFrame{
     // TODO: Take a good look and make sure you understand how these methods and components work
     private void initComponents(String title) {
 
+        //Should be here maybe
         this.setTitle(title);
-        this.setPreferredSize(new Dimension(X,Y));
+        this.setPreferredSize(new Dimension(X, Y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
         this.add(drawPanel);
 
 
-
+        //should be moved into spinnermodel class
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
                         0, //min
@@ -75,6 +83,8 @@ public class VehicleView extends JFrame{
 
         this.add(gasPanel);
 
+
+        //should be moved into VehicleController
         controlPanel.setLayout(new GridLayout(2,4));
 
         controlPanel.add(gasButton, 0);
@@ -88,17 +98,20 @@ public class VehicleView extends JFrame{
         controlPanel.setBackground(Color.CYAN);
 
 
+        //Also vehicleController
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(startButton);
 
-
+        //VehicleController
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
 
+        //should be moved to GasButton class!!!
+    
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
         gasButton.addActionListener(new ActionListener() {
@@ -108,6 +121,7 @@ public class VehicleView extends JFrame{
             }
         });
 
+        //      <------View stuff!! ----->
         // Make the frame pack all it's components by respecting the sizes if possible.
         this.pack();
 
