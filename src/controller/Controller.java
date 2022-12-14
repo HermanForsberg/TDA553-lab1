@@ -16,6 +16,8 @@ public class Controller extends JPanel{
     private TurboOnButton turboOnButton;
     private RaiseBedButton raiseBedButton;
     private LowerBedButton lowerBedButton;
+    private StartButton startButton;
+    private StopButton stopButton;
     private StateOfGame state;
     private GasPanel gasPanel;
 
@@ -38,6 +40,17 @@ public class Controller extends JPanel{
         this.setPreferredSize(new Dimension(304, 200));
         //this.add(controlPanel);
         this.setBackground(Color.CYAN);
+
+        startButton.setBackground(Color.blue);
+        startButton.setForeground(Color.green);
+        startButton.setPreferredSize(new Dimension(600/5-15,200));
+        this.add(startButton);
+
+        stopButton.setBackground(Color.red);
+        stopButton.setForeground(Color.black);
+        stopButton.setPreferredSize(new Dimension(600/5-15,200));
+        this.add(stopButton);
+
     }
 
 }

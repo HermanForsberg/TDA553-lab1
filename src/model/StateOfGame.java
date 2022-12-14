@@ -2,9 +2,10 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import vehicle.Vehicle;
 
-public class StateOfGame {
+public class StateOfGame{
 
     private List<Vehicle> vehicles = new ArrayList<>(); 
 
@@ -24,4 +25,7 @@ public class StateOfGame {
         }
     }
 
+
+    
 }
+
