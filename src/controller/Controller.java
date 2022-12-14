@@ -1,34 +1,43 @@
 package controller;
 
+
+import java.awt.*;
 import javax.swing.JPanel;
 
 import controller.buttons.*;
 import model.StateOfGame;
 
 
-public class Controller {
-    private JPanel controlPanel = new JPanel();
+public class Controller extends JPanel{
+    //private JPanel controlPanel = new JPanel();
     private GasButton gasButton;
+    private BrakeButton brakeButton;
+    private TurboOffButton turboOffButton;
+    private TurboOnButton turboOnButton;
+    private RaiseBedButton raiseBedButton;
+    private LowerBedButton lowerBedButton;
     private StateOfGame state;
+    private GasPanel gasPanel;
 
     public Controller(StateOfGame state) {
         this.state = state;
         this.gasButton = new GasButton(state);
+        this.gasPanel = new GasPanel();
     }
 
 
-    private void initComponents(){
-        controlPanel.setLayout(new GridLayout(2,4));
+    public void initComponents(){
+        this.setLayout(new GridLayout(2,4));
 
-        controlPanel.add(gasButton, 0);
-        controlPanel.add(turboOnButton, 1);
-        controlPanel.add(liftBedButton, 2);
-        controlPanel.add(brakeButton, 3);
-        controlPanel.add(turboOffButton, 4);
-        controlPanel.add(lowerBedButton, 5);
-        controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
-        this.add(controlPanel);
-        controlPanel.setBackground(Color.CYAN);
+        this.add(gasButton, 0);
+        this.add(turboOnButton, 1);
+        this.add(raiseBedButton, 2);
+        this.add(brakeButton, 3);
+        this.add(turboOffButton, 4);
+        this.add(lowerBedButton, 5);
+        this.setPreferredSize(new Dimension(304, 200));
+        //this.add(controlPanel);
+        this.setBackground(Color.CYAN);
     }
 
 }

@@ -1,4 +1,10 @@
 package controller.buttons;
-public class BrakeButton {
+
+import javax.swing.*;
+
+public class BrakeButton extends JButton{
+    JButton brakeButton = new JButton("Brake");
+
     
+
 }

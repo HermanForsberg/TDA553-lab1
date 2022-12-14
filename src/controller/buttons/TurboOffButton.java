@@ -1,4 +1,7 @@
 package controller.buttons;
-public class TurboOffButton {
-    
+
+import javax.swing.JButton;
+
+public class TurboOffButton extends JButton{
+    JButton turboOffButton = new JButton("Saab Turbo off");
 }

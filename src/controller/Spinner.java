@@ -3,7 +3,6 @@ package controller;
 import javax.swing.*;
 import javax.swing.event.*;
 
-import controller.buttons.GasButton;
 
 public class Spinner extends JSpinner implements javax.swing.SpinnerModel{
     int gasAmount = 0;

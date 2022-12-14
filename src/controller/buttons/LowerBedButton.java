@@ -1,4 +1,7 @@
 package controller.buttons;
-public class LowerBedButton {
-    
+
+import javax.swing.*;
+
+public class LowerBedButton extends JButton{
+    JButton lowerBedButton = new JButton("Lower Lift Bed");
 }
