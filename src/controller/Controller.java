@@ -25,7 +25,7 @@ public class Controller extends JPanel{
         this.state = state;
         this.gasButton = new GasButton(state);
         this.gasPanel = new GasPanel();
-    }
+        }
 
 
     public void initComponents(){
