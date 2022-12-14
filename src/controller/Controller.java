@@ -38,7 +38,6 @@ public class Controller extends JPanel{
         this.add(turboOffButton, 4);
         this.add(lowerBedButton, 5);
         this.setPreferredSize(new Dimension(304, 200));
-        //this.add(controlPanel);
         this.setBackground(Color.CYAN);
 
         startButton.setBackground(Color.blue);

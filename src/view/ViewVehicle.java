@@ -11,6 +11,7 @@ public class ViewVehicle extends JFrame{
 
     public ViewVehicle(){
         drawPanel = new DrawPanel(X, Y-240);
+        drawView("Bitch");
     }
 
     public void drawView(String title){
