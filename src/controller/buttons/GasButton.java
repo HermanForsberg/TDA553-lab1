@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 
 import controller.Spinner;
 import model.StateOfGame;
-import vehicle.Vehicle;
 
 public class GasButton extends JButton {
+    JButton gasButton = new JButton("Gas");
     StateOfGame state;
     Spinner spinner;
 
