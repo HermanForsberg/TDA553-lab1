@@ -1,3 +1,4 @@
+package model;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,14 @@ public class StateOfGame {
 
     public List<Vehicle> getVehicles() {
         return vehicles;
+    }
+
+    public void gas(int amount) {
+        double gas = ((double) amount) / 100;
+        for (Vehicle vehicle : vehicles
+                ) {
+            vehicle.gas(gas);
+        }
     }
 
 }
