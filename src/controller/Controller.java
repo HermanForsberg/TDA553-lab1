@@ -40,7 +40,6 @@ public class Controller extends JPanel{
 
     public void initComponents(){
         this.setLayout(new GridLayout(2,4));
-        this.add(gasPanel);
         this.add(gasButton, 0);
         this.add(turboOnButton, 1);
         this.add(raiseBedButton, 2);
@@ -59,7 +58,7 @@ public class Controller extends JPanel{
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(600/5-15,200));
         this.add(stopButton);
-
+        this.add(gasPanel);
     }
 
 }
