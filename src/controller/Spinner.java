@@ -1,7 +1,6 @@
 package controller;
 
 import javax.swing.*;
-import javax.swing.event.*;
 
 
 public class Spinner extends JSpinner implements javax.swing.SpinnerModel{

@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GasPanel extends JPanel{
-    JLabel gasLabel = new JLabel("Amount of gas");
-    Spinner spinner;
+    private JLabel gasLabel = new JLabel("Amount of gas");
+    private Spinner spinner;
 
     public GasPanel(Spinner spinner){
         this.spinner = spinner;
