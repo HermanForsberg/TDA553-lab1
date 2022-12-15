@@ -9,21 +9,12 @@ public class Spinner extends JSpinner implements javax.swing.SpinnerModel{
     JSpinner gasSpinner;
 
     public Spinner(){
-        SpinnerModel spinnerModel =
-                new SpinnerNumberModel(0, //initial value
-                        0, //min
-                        100, //max
-                        1);//step
-        gasSpinner = new JSpinner(spinnerModel);
-        gasSpinner.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                gasAmount = (int) ((JSpinner)e.getSource()).getValue();
-            }
-        });
+        super(new SpinnerNumberModel(0, 0,100,1));
+
     }
 
     public int getGasAmount() {
-        return gasAmount;
+        return (int)(getValue());
     }
 
     

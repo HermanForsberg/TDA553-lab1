@@ -16,7 +16,7 @@ public class TimerListener implements ActionListener {
         this.vehicles = vehicles;
         this.view = view;
     }
-
+    @Override
     public void actionPerformed(ActionEvent e) {
         for (Vehicle vehicle : vehicles) {
             vehicle.move();

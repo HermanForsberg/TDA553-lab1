@@ -5,7 +5,12 @@ import java.awt.*;
 
 public class GasPanel extends JPanel{
     JLabel gasLabel = new JLabel("Amount of gas");
-    Spinner spinner = new Spinner();
+    Spinner spinner;
+
+    public GasPanel(Spinner spinner){
+        this.spinner = spinner;
+        initComponents();
+    }
 
 
     public void initComponents(){

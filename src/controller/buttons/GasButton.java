@@ -9,17 +9,20 @@ import controller.Spinner;
 import model.StateOfGame;
 
 public class GasButton extends JButton {
-    JButton gasButton = new JButton("Gas");
     StateOfGame state;
-    Spinner spinner;
+    
 
     
-    public GasButton(StateOfGame state) {
+    public GasButton(StateOfGame state, Spinner gasSpinner) {
+        super("Gas");
+        
         this.state = state;
         this.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                state.gas(spinner.getGasAmount());
+                System.out.println(gasSpinner.getGasAmount());
+                state.gas(gasSpinner.getGasAmount());
+                System.out.println("hej");
             }
         });
     }

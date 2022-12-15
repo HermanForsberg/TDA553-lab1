@@ -20,17 +20,27 @@ public class Controller extends JPanel{
     private StopButton stopButton;
     private StateOfGame state;
     private GasPanel gasPanel;
+    private Spinner spinner;
 
     public Controller(StateOfGame state) {
         this.state = state;
-        this.gasButton = new GasButton(state);
-        this.gasPanel = new GasPanel();
+        this.spinner = new Spinner();
+        this.gasButton = new GasButton(state, spinner);
+        this.brakeButton = new BrakeButton();
+        this.turboOffButton = new TurboOffButton();
+        this.turboOnButton = new TurboOnButton();
+        this.raiseBedButton = new RaiseBedButton();
+        this.lowerBedButton = new LowerBedButton();
+        this.startButton = new StartButton();
+        this.stopButton = new StopButton();
+        this.gasPanel = new GasPanel(spinner);
+        initComponents();
         }
 
 
     public void initComponents(){
         this.setLayout(new GridLayout(2,4));
-
+        this.add(gasPanel);
         this.add(gasButton, 0);
         this.add(turboOnButton, 1);
         this.add(raiseBedButton, 2);
